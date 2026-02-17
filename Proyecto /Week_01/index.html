@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-commerce de Libros Usados</title>
+  <link rel="stylesheet" href="styles.css">
+  </head>
+
+<body data-theme="light">
+
+  <div class="card">
+
+    <header>
+      <h1 id="entity-name">Nombre tienda</h1>
+      <p id="entity-description">Descripción del e-commerce</p>
+    </header>
+
+    <div class="info">
+      <span>📧 <strong>Email:</strong> <span id="entity-email"></span></span>
+      <span>📍 <strong>Ubicación:</strong> <span id="entity-location"></span></span>
+    </div>
+
+    <div class="section">
+      <h2>📚 Libros destacados</h2>
+      <div id="items-list"></div>
+      <button id="toggle-items" class="secondary">Mostrar más</button>
+    </div>
+
+    <div class="section">
+      <h2>📊 Estadísticas</h2>
+      <div id="stats" class="stats"></div>
+    </div>
+
+    <div class="section">
+      <h2>🌐 Redes</h2>
+      <div id="links" class="links"></div>
+    </div>
+
+    <div class="actions">
+      <button id="copy-btn">📋 Copiar info</button>
+      <button id="theme-toggle">🌙</button>
+    </div>
+
+  </div>
+
+  <div id="toast">
+    <span id="toast-message"></span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
