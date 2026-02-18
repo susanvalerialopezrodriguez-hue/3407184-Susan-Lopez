@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚 Libros Con Segunda Vida - E-commerce de Libros Usados</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+   <div class="container">
+  
+     <!-- HEADER --> 
+      <header class="header"> 
+        <h1>📚 Libros Con Segunda Vida</h1>
+         <p class="subtitle">Compra y vende libros usados, promoviendo la lectura sostenible</p> 
+        </header>
+
+    <div class="items-section">
+      <h2>📚 Libros destacados</h2>
+      <div id="items-list"></div>
+      <button type="submit" id="toggle-items" class="btn btn-primary">
+            Mostrar mas
+          </button>
+    </div>
+
+    <section class="form-section">
+      <h3 id="form-title">➕ Compra Nueva</h3>
+      <form id="item-form" class="item-form">
+        <div class="form-group">
+          <label for="item-name">Nombre del libro *</label>
+          <input 
+            type="text" 
+            id="item-name" 
+            required
+          >
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="item-category">Genero</label>
+            <select id="item-category">
+              <option value="novel"> Novela</option>
+              <option value="science ficción"> Ciencia ficción</option>
+              <option value="children's literature"> Literatura infantil</option>
+              <option value="classic"> Clásico</option>
+              <option value="history"> Historia</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="item-duration">Cantidad</label>
+            <input 
+              type="number" 
+              id="item-duration" 
+              min="1" 
+              max="120" 
+              value="10"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="item-priority">Entrega rapia</label>
+            <select id="item-priority">
+              <option value="low">🟢 Opcional</option>
+              <option value="medium" selected>🟡 Regular</option>
+              <option value="high">🔴 Urgente</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="submit-btn" class="btn btn-primary">
+            Comprar
+          </button>
+          <button 
+            type="button" 
+            id="cancel-btn" 
+            class="btn btn-secondary" 
+            style="display: none;"
+          >
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section class="items-section">
+      <h2> Libros comprados </h2>
+      
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon">📚</div>
+        <h3>No hay libros aún</h3>
+       <p>Realiza tu primera compra</p>
+      </div>
+
+    <div class="links-section">
+      <h2>🌐 Redes</h2>
+      <div id="links" class="links"></div>
+    </div>
+
+     <div class="actions">
+      <button id="copy-btn">📋 Copiar info</button>
+      <button id="theme-toggle">🌙</button>
+    </div>
+
+  <div id="toast">
+    <span id="toast-message"></span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
